@@ -1,39 +1,36 @@
+package packages1;
 
-abstract class demo{         // define abstract class
+public class abstractClass extends Pet {
 
-    int x;
-    String name;
-    int age;
-    void write(String name,int age)
-    {
-        this.name = name;
-        this.age = age;
+    static{
+        System.out.println("Details of all animal - ");
     }
-    void read(int x)
-    {
-        this.x = x;
-    }
-    abstract void compute();
-    abstract void display();        // always define method as a abstract keyword
-}
 
-public class abstractClass extends demo{
+    void petData(String n, int a){
+        System.out.println("Pet name : "+n);
+        System.out.println("Pet age : "+a);
+    }
     
-    void display()
-    {
-        System.out.println("Person name : "+name);
-        System.out.println("Person age : "+age);
+    void animalData(String n,int l){
+        System.out.println("Animal name : "+n);
+        System.out.println("Animal legs : "+l);
     }
-    void compute()
-    {
-        System.out.println("Value of x : "+x);
-    }
+
     public static void main(String[] args) {
         
         abstractClass obj = new abstractClass();
-        obj.read(10);
-        obj.write("Piyush", 18);
-        obj.display();
-        obj.compute();
+        obj.petData("Cat", 3);
+        obj.animalData("lion", 4); 
     }
+}
+
+abstract class Pet extends Animal{
+    abstract void petData(String name,int age);
+    // abstract void petDetails();
+}
+
+abstract class Animal{
+    abstract void animalData(String name,int legs);
+    // abstract void animalDetails();
+
 }
