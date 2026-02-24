@@ -1,2 +1,2 @@
 # Java-programs
-My all java programs
+My practice java programs
