@@ -1,21 +1,30 @@
 import java.awt.*;
 
-public class MenuBarDemo extends Frame{
-    
-    MenuBarDemo() {
-        setLayout(null);
-        setVisible(true);
-        setSize(350,400);
-        setTitle("Menu Bars");
-
-        MenuBar mb = new MenuBar();
-        setMenuBar(mb);
-        Menu file = new Menu("Color");
-        Menu exit = new Menu("Exit");
-        mb.add(file);
-        mb.add(exit);
-    }
+public class MenuBarDemo {
     public static void main(String[] args) {
-        new MenuBarDemo();
+        Frame f = new Frame();
+        MenuBar mb = new MenuBar();
+        Menu files = new Menu("Files");
+        Menu edit = new Menu("Format");
+
+        MenuItem open = new MenuItem("Open");
+        MenuItem save = new MenuItem("Save");
+        MenuItem exit = new MenuItem("Exit");
+
+        MenuItem bold = new MenuItem("Bold");
+        MenuItem italic = new MenuItem("Italic");
+
+        edit.add(bold);
+        edit.add(italic);
+        files.add(open);
+        files.add(save);
+        files.add(exit);
+
+        mb.add(files);
+        mb.add(edit);
+
+        f.setMenuBar(mb);
+        f.setSize(500,600);
+        f.setVisible(true);
     }
 }
