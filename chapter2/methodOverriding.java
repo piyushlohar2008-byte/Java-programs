@@ -1,28 +1,27 @@
-public class methodOverriding extends Rectangle{
-    int radius;
-    float PI = 3.14f;
-    void area()
-    {
-        super.area();
-        float area_of_circle = radius * radius * PI;
-        System.out.println("Area of circle : "+area_of_circle);
-    }
+public class methodOverriding {
     public static void main(String[] args) {
-        
-        methodOverriding obj = new methodOverriding();
-        obj.radius = 2;
-        obj.area();
-
+        override2 v1 = new override2();
+        v1.run();
+        System.out.println();
+        override v2 = new override();
+        v2.run();
     }
 }
 
-class Rectangle{
+class override {
+    void run() {
+        for (int i = 1; i <= 10; i++) {
+            System.out.print(i+" ");
+        }
+    }
+}
 
-    int length = 10, width = 20;
-
-    void area()
-    {
-        int area_of_rectangle = length * width;
-        System.out.println("Area of rectangle : "+area_of_rectangle);
+class override2 extends override {
+    void run() {
+        int i = 1;
+        while(i <= 5) {
+            System.out.print(i+" ");
+            i++;
+        }
     }
 }
