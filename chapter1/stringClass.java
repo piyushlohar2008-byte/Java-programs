@@ -1,37 +1,21 @@
-
 public class stringClass {
-    
     public static void main(String[] args) {
+        String s1 = new String("Python");
+        System.out.println(s1.length());
+        System.out.println(s1.charAt(0));
+        System.out.println(s1.indexOf("o"));
+        System.out.println(s1.concat(" language"));
+        System.out.println(s1.endsWith("n"));
+
+        String s2 = new String("Piyush");
+        System.out.println(s2.toUpperCase());
+        System.out.println(s2.toLowerCase());
+        System.out.println(s2.replace("Piyush","Aniket"));
+        System.out.println(s2.contains(s1));
+        System.out.println(s2.equals(s1));
         
-        // String name = "   Piyush Lohar";
-        // System.out.println(name.toUpperCase());   // convert string into uppercase
-        // System.out.println(name.toLowerCase());   // convert string into lowercase
-
-        // System.out.println(name.trim());   // remove space 
-        String s1 = "Welcome to java programming, java is good language ";
-
-        // System.out.println(s1.contains("Hello"));    // print that variable content
-
-        // String s2 = "Wrap";
-        // System.out.println(s2.replace("W", "T")); // replace a character
-        // System.out.println(s2.concat(" Text"));   // add new line
-
-        // System.out.println(s2.indexOf("p"));      // print index of character
-
-        String firstName = "Shraddha";
-        // String lastName = " Khapra";
-        // System.out.println(firstName.concat(lastName));
-
-        // System.out.println(s2.length());
-
-        // String newName = "Samarth Lohar";
-        // System.out.println(newName.replace("Samarth", "Piyush"));
-
-        System.out.println(firstName.charAt(3));   // return character at index n
-        System.out.println(s1.substring(11,15 ));   
-        // gives substring starting form n(th) index upto m(th)
-
-        System.out.println(s1.substring(11));
-        // gives substring starting from n(th) index
+        String s3 = new String("This is the end ");
+        System.out.println(s3.repeat(3));
+        System.out.println(s3.compareToIgnoreCase(s2));
     }
 }
